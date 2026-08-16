@@ -1,0 +1,201 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+/* Body */
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f4f9;
+
+}
+
+/* Header */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#4d8be7;
+
+    color:white;
+
+    padding:20px 60px;
+
+}
+
+/* Navigation */
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:20px;
+
+    font-weight:bold;
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:60%;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+}
+
+/* Heading */
+
+.container h1{
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+/* Labels */
+
+label{
+
+    display:block;
+
+    margin-top:15px;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+}
+
+/* Input Fields */
+
+input,select,textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:6px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+/* Focus Effect */
+
+input:focus,
+
+select:focus,
+
+textarea:focus{
+
+    border-color:#4d8be7;
+
+}
+
+/* Button Container */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:25px;
+
+}
+
+/* Buttons */
+
+button{
+
+    width:48%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#4d8be7;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    background:#2f6fd3;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+
+width:90%;
+
+}
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}

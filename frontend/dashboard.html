@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h2>Time Tracker</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="projects.html">Projects</a>
+            <a href="timeentry.html">Add Time Entry</a>
+            <a href="mytimeentries.html">My Time Entries</a>
+            <a href="reports.html">My Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>Welcome</h1>
+            <p>Track your working hours efficiently.</p>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="cards">
+            <div class="card">
+                <h3>Today's Hours</h3>
+                <h2 id="todayHours">0</h2>
+            </div>
+            <div class="card">
+                <h3>This Week</h3>
+                <h2 id="weekHours">0</h2>
+            </div>
+            <div class="card">
+                <h3>Projects</h3>
+                <h2 id="projects">0</h2>
+            </div>
+        </section>
+
+        <!-- Recent Time Entries -->
+        <section class="table-section">
+            <h2>Recent Time Entries</h2>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Project</th>
+                    <th>Hours</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center;">Loading recent entries...</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="authHelper.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

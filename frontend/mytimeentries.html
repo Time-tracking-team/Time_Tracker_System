@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Time Entries</title>
+    <!-- Use correct CSS name -->
+    <link rel="stylesheet" href="mytimentries.css">
+    <style>
+        /* CSS for Filters and Modal */
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .filter-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .filter-input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+        
+        /* Modal Style */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.5); 
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto; 
+            padding: 25px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 500px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: left;
+        }
+        .modal-content h2 {
+            margin-bottom: 20px;
+            color: #4d8be7;
+        }
+        .modal-content label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .modal-content input, .modal-content select, .modal-content textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        .modal-actions button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .modal-actions .btn-save {
+            background: #4d8be7;
+            color: white;
+        }
+        .modal-actions .btn-save:hover {
+            background: #3572cd;
+        }
+        .modal-actions .btn-cancel {
+            background: #888;
+            color: white;
+        }
+        .modal-actions .btn-cancel:hover {
+            background: #707070;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h2>Time Tracker</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="projects.html">Projects</a>
+            <a href="timeentry.html">Add Time Entry</a>
+            <a href="mytimeentries.html">My Time Entries</a>
+            <a href="reports.html">My Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>My Time Entries</h1>
+        <p style="margin-bottom: 20px; color: #666;">View, search, edit or delete your logged daily hours.</p>
+
+        <!-- Search and Filter Module -->
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="searchProject" style="font-weight: bold; color: #555;">Search Project:</label>
+                <input type="text" id="searchProject" placeholder="Search by project name..." class="filter-input">
+            </div>
+            <div class="filter-group">
+                <label for="filterDate" style="font-weight: bold; color: #555;">Filter Date:</label>
+                <input type="date" id="filterDate" class="filter-input">
+            </div>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Project</th>
+                    <th>Hours</th>
+                    <th>Description</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="entriesTableBody">
+                <tr>
+                    <td colspan="5" style="text-align: center;">Loading time entries...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Edit Modal Overlay -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Time Entry</h2>
+            <form id="editForm">
+                <label for="editProjectId">Select Project</label>
+                <select id="editProjectId" required>
+                    <option value="">Select Project</option>
+                </select>
+
+                <label for="editWorkDate">Date</label>
+                <input type="date" id="editWorkDate" required>
+
+                <label for="editHoursWorked">Hours Worked</label>
+                <input type="number" id="editHoursWorked" min="0.01" max="24" step="0.01" required>
+
+                <label for="editDescription">Work Description</label>
+                <textarea id="editDescription" rows="4" required></textarea>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="closeModalBtn">Cancel</button>
+                    <button type="submit" class="btn-save">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="authHelper.js"></script>
+    <script src="mytimeentries.js"></script>
+</body>
+</html>

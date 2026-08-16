@@ -1,0 +1,13 @@
+{
+  "name": "time-tracker-system",
+  "version": "1.0.0",
+  "description": "Minimal, highly secure, modular Time Tracking System (TTS)",
+  "main": "backend/app.js",
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "node backend/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

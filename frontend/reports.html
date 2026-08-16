@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reports</title>
+    <link rel="stylesheet" href="reports.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>Time Tracker</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="projects.html">Projects</a>
+            <a href="timeentry.html">Add Time Entry</a>
+            <a href="mytimeentries.html">My Time Entries</a>
+            <a href="reports.html">My Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>My Reports</h1>
+        <p style="margin-bottom: 20px; color: #666;">View aggregate statistics and detailed project-wise logs.</p>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Hours Logged</h3>
+                <h2>0.00</h2>
+            </div>
+            <div class="card">
+                <h3>Projects Worked On</h3>
+                <h2>0</h2>
+            </div>
+            <div class="card">
+                <h3>Average Hours/Day</h3>
+                <h2>0.00</h2>
+            </div>
+        </div>
+
+        <!-- Monthly Report -->
+        <div class="table-section">
+            <h2>Detailed Personal Work Report</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #4d8be7; color: white;">
+                        <th style="padding: 12px;">Employee Name</th>
+                        <th style="padding: 12px;">Project</th>
+                        <th style="padding: 12px;">Work Date</th>
+                        <th style="padding: 12px;">Hours Worked</th>
+                        <th style="padding: 12px;">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTableBody">
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 15px;">Loading report...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="authHelper.js"></script>
+    <script src="reports.js"></script>
+</body>
+
+</html>

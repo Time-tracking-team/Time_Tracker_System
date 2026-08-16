@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Time Entry</title>
+    <link rel="stylesheet" href="timeentry.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>Time Tracker</h2>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="projects.html">Projects</a>
+            <a href="timeentry.html">Add Time Entry</a>
+            <a href="mytimeentries.html">My Time Entries</a>
+            <a href="reports.html">My Reports</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Add Time Entry</h1>
+
+        <!-- Time Entry Form -->
+        <form id="timeEntryForm">
+            <!-- Project -->
+            <label>Select Project</label>
+            <select id="projectId" required>
+                <option value="">Select Project</option>
+                <!-- Dynamic options loaded from DB -->
+            </select>
+
+            <!-- Date -->
+            <label>Date</label>
+            <input type="date" id="workDate" required>
+
+            <!-- Hours -->
+            <label>Hours Worked</label>
+            <input type="number" id="hoursWorked" placeholder="Enter Hours" min="0.01" max="24" step="0.01" required>
+
+            <!-- Description -->
+            <label>Work Description</label>
+            <textarea id="taskDescription" rows="5" placeholder="Describe your work..." required></textarea>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="submit">Save Entry</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="authHelper.js"></script>
+    <script src="timeentry.js"></script>
+</body>
+
+</html>

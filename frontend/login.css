@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#ececf7;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+}
+
+/* Main Container */
+
+.container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Login Box */
+
+.login-box{
+
+    background:#d9d7ef;
+
+    width:340px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    /*box-shadow:0px 5px 15px rgba(0,0,0,0.1);*/
+
+    text-align:center;
+
+}
+
+/* Heading */
+
+.login-box h2{
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+/* Paragraph */
+
+.login-box p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+/* Input Container */
+
+.input-box{
+
+    margin-bottom:18px;
+
+}
+
+/* Input Fields */
+
+.input-box input{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #bbb;
+
+    border-radius:6px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+/* Focus Effect */
+
+.input-box input:focus{
+
+    border-color:#4d8be7;
+
+}
+
+/* Login Button */
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#4d8be7;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    text-decoration: none;
+
+}
+
+button a{
+
+    text-decoration: none;
+
+    color: white;
+
+}
+/* Hover */
+
+button:hover{
+
+    background:#326fd0;
+
+}

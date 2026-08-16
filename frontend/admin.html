@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2>Admin Panel</h2>
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="manageprojects.html">Projects</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <p style="margin-bottom: 20px; color: #666;">Overview of system analytics and submitted work hours.</p>
+
+        <!-- Summary Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <h2>Loading...</h2>
+            </div>
+            <div class="card">
+                <h3>Total Projects</h3>
+                <h2>Loading...</h2>
+            </div>
+            <div class="card">
+                <h3>Total Logged Hours</h3>
+                <h2>Loading...</h2>
+            </div>
+        </div>
+
+        <!-- Employee Table -->
+        <div class="table-section">
+            <h2>Employee Summary</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #4d8be7; color: white;">
+                        <th style="padding: 12px; text-align: center;">Employee</th>
+                        <th style="padding: 12px; text-align: center;">Project</th>
+                        <th style="padding: 12px; text-align: center;">Date</th>
+                        <th style="padding: 12px; text-align: center;">Hours</th>
+                        <th style="padding: 12px; text-align: center;">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="teamReportsTableBody">
+                    <tr>
+                        <td colspan="5" style="text-align: center; padding: 15px;">Loading team reports...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="authHelper.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

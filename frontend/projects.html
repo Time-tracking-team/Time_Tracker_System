@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigned Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h2>Time Tracker</h2>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="projects.html">Projects</a>
+        <a href="timeentry.html">Add Time Entry</a>
+        <a href="mytimeentries.html">My Time Entries</a>
+        <a href="reports.html">My Reports</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+    <h1>Assigned Projects</h1>
+    <p style="margin-bottom: 20px; color: #666;">View your assigned projects and monitor deadlines.</p>
+
+    <!-- Search Section -->
+    <div class="search-box">
+        <input type="text" id="searchProject" placeholder="Search Project...">
+        <select id="statusFilter">
+            <option value="All">All Statuses</option>
+            <option value="Completed">Completed</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Pending">Pending</option>
+        </select>
+    </div>
+
+    <!-- Project Cards (Dynamically populated) -->
+    <div class="projects">
+        <p style="text-align: center; color: #666; font-size: 16px; margin-top: 20px;">Loading projects...</p>
+    </div>
+</div>
+
+<script src="authHelper.js"></script>
+<script src="projects.js"></script>
+</body>
+</html>
